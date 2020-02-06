@@ -23,6 +23,6 @@ $ npm run test:coverage
 ## Add project to terminal
 
 ```sh
-$ npm build
+$ npm run build
 $ npm link
 ```
