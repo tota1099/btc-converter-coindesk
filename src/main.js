@@ -11,6 +11,4 @@ program
   .option('-A, --amount <amount>', 'Value in Bictoin to be convert. (Default: 1)')
   .parse(process.argv);
 
-/* eslint-disable no-console */
-console.log(converterBTC(program.currency, program.amount));
-/* eslint-enable no-console */
+converterBTC(program.currency, program.amount);

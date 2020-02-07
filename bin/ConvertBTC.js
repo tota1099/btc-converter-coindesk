@@ -1,6 +1,7 @@
 'use strict';
 
 /* eslint-disable no-console */
+var chalk = require('chalk');
 var request = require('request');
 
 function convertBTC() {
@@ -15,10 +16,10 @@ function convertBTC() {
     try {
       apiResponse = JSON.parse(body);
     } catch (parseError) {
-      console.log('Something wen wrong in the API. Try in a few minutes.');
+      console.log(chalk.red('Something wen wrong in the API. Try in a few minutes.'));
       return parseError;
     }
-    console.log(amount + ' BTC to ' + currency + ' = ' + apiResponse.price);
+    console.log(chalk.red(amount) + ' BTC to ' + chalk.cyan(currency) + ' = ' + chalk.yellow(apiResponse.price));
     return true;
   });
 }
