@@ -14,7 +14,7 @@ function convertBTC() {
   var currency = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'USD';
   var amount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
-  var url = 'https://apiv2.bitcoinaverage.com/convert/global?from=BTC&to=' + currency + '&amount=' + amount;
+  var url = 'https://api.coindesk.com/v1/bpi/currentprice/' + currency + '.json';
 
   spinner.start();
 
@@ -23,7 +23,8 @@ function convertBTC() {
     return body;
   }).then(function (body) {
     var apiResponse = JSON.parse(body);
-    console.info(chalk.red(amount) + ' BTC to ' + chalk.cyan(currency) + ' = ' + chalk.yellow(apiResponse.price));
+    var price = parseFloat(apiResponse.bpi[currency].rate.replace(".", '_').replace(/,/g, '.').replace("_", ",")) * amount;
+    console.info(chalk.red(amount) + ' BTC to ' + chalk.cyan(currency) + ' = ' + chalk.yellow(price));
   }).catch(function (err) {
     spinner.stop();
     console.info(chalk.red('Something wen wrong in the API. Try in a few minutes.'));

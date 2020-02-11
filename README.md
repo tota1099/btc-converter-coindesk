@@ -5,6 +5,32 @@
 
 A CLI to convert Bitcoin to any currency provided.
 
+### Installing
+
+```
+$ npm i -g bitcoin-converter-coindesk
+```
+
+### How to use
+
+```sh
+bitcoin-converter-coindesk --help
+
+  Usage: bitcoin-converter-coindesk [options]
+
+  Convert Bitcoin to any currency defined
+
+  Options:
+
+    -h, --help                 output usage information
+    -V, --version              output the version number
+    -C, --currency <currency>  Currency to be converted. (Default: USD)
+    -A, --amount <amount>      Value in Bitcoin to convert. (Default: 1)
+
+## Dependencies
+
+This library depends on [node](https://nodejs.org/en/) version 10 or bigger.
+
 ## Run tests
 
 ```sh

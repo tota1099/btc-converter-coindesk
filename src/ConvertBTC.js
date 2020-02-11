@@ -9,7 +9,7 @@ const spinner = ora({
 });
 
 function convertBTC(currency = 'USD', amount = 1) {
-  const url = `https://apiv2.bitcoinaverage.com/convert/global?from=BTC&to=${currency}&amount=${amount}`;
+  const url = `https://api.coindesk.com/v1/bpi/currentprice/${currency}.json`;
 
   spinner.start();
 
@@ -20,7 +20,8 @@ function convertBTC(currency = 'USD', amount = 1) {
     })
     .then((body) => {
       const apiResponse = JSON.parse(body);
-      console.info(`${chalk.red(amount)} BTC to ${chalk.cyan(currency)} = ${chalk.yellow(apiResponse.price)}`);
+      const price = parseFloat(apiResponse.bpi[currency].rate_float).toFixed(2) * amount;
+      console.info(`${chalk.red(amount)} BTC to ${chalk.cyan(currency)} = ${chalk.yellow(price)}`);
     })
     .catch((err) => {
       spinner.stop();
