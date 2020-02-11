@@ -26,6 +26,7 @@ bitcoin-converter-coindesk --help
     -V, --version              output the version number
     -C, --currency <currency>  Currency to be converted. (Default: USD)
     -A, --amount <amount>      Value in Bitcoin to convert. (Default: 1)
+```
 
 ## Dependencies
 
