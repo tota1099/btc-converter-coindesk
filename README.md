@@ -1,4 +1,4 @@
-# Btc-converter
+# Btc-converter-coindesk
 
 [![Build Status](https://travis-ci.org/tota1099/btc-converter.svg?branch=master)](https://travis-ci.org/tota1099/btc-converter)
 [![Coverage Status](https://coveralls.io/repos/github/tota1099/btc-converter/badge.svg?branch=master)](https://coveralls.io/github/tota1099/btc-converter?branch=master)
@@ -8,13 +8,13 @@ A CLI to convert Bitcoin to any currency provided.
 ### Installing
 
 ```
-$ npm i -g bitcoin-converter-coindesk
+$ npm i -g btc-converter-coindesk
 ```
 
 ### How to use
 
 ```sh
-bitcoin-converter-coindesk --help
+btc-converter-coindesk --help
 
   Usage: bitcoin-converter-coindesk [options]
 
