@@ -23,7 +23,7 @@ function convertBTC() {
     return body;
   }).then(function (body) {
     var apiResponse = JSON.parse(body);
-    var price = parseFloat(apiResponse.bpi[currency].rate.replace(".", '_').replace(/,/g, '.').replace("_", ",")) * amount;
+    var price = parseFloat(apiResponse.bpi[currency].rate_float).toFixed(2) * amount;
     console.info(chalk.red(amount) + ' BTC to ' + chalk.cyan(currency) + ' = ' + chalk.yellow(price));
   }).catch(function (err) {
     spinner.stop();
