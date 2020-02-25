@@ -1,7 +1,7 @@
 # Btc-converter-coindesk
 
-[![Build Status](https://travis-ci.org/tota1099/btc-converter.svg?branch=master)](https://travis-ci.org/tota1099/btc-converter)
-[![Coverage Status](https://coveralls.io/repos/github/tota1099/btc-converter/badge.svg?branch=master)](https://coveralls.io/github/tota1099/btc-converter?branch=master)
+[![Build Status](https://travis-ci.org/tota1099/btc-converter-coindesk.svg?branch=master)](https://travis-ci.org/tota1099/btc-converter-coindesk)
+[![Coverage Status](https://coveralls.io/repos/github/tota1099/btc-converter-coindesk/badge.svg?branch=master)](https://coveralls.io/github/tota1099/btc-converter-coindesk?branch=master)
 
 A CLI to convert Bitcoin to any currency provided.
 
