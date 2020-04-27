@@ -5,7 +5,7 @@ const btcConverter = './src/main.js';
 const pkg = require('../package.json');
 
 describe('Main CLI', () => {
-    it('should return version of btc-converter', (done) => {
+    it('should return version of btc-converter-coindesk', (done) => {
         exec(`${btcConverter} --version`, (err, stdout, stderr) => {
             if(err) throw err;
             expect(stdout.replace('\n', '')).to.be.equal(pkg.version);
@@ -13,7 +13,7 @@ describe('Main CLI', () => {
         });
     });
 
-    it('should return a description when btc-converter --help', (done) => {
+    it('should return a description when btc-converter-coindesk --help', (done) => {
         exec(`${btcConverter} --help`, (err, stdout, stderr) => {
             if(err) throw err;
             expect(stdout.includes('Convert Bitcoin to any currency defined.')).to.be.true;
@@ -21,7 +21,7 @@ describe('Main CLI', () => {
         });
     });
 
-    it('should return the currency option when btc-converter --help', (done) => {
+    it('should return the currency option when btc-converter-coindesk --help', (done) => {
         exec(`${btcConverter} --help`, (err, stdout, stderr) => {
             if(err) throw err;
             expect(stdout.includes('--currency')).to.be.true;
@@ -29,7 +29,7 @@ describe('Main CLI', () => {
         });
     });
 
-    it('should return the amount option when btc-converter --help', (done) => {
+    it('should return the amount option when btc-converter-coindesk --help', (done) => {
         exec(`${btcConverter} --help`, (err, stdout, stderr) => {
             if(err) throw err;
             expect(stdout.includes('--amount')).to.be.true;

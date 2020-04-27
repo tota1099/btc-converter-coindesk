@@ -1,6 +1,6 @@
 {
   "name": "btc-converter-coindesk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI to convert Bitcoin to any currency provided.",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
   },
   "bin": {
-    "btc-converter": "bin/main.js"
+    "btc-converter-coindesk": "bin/main.js"
   },
   "nyc": {
     "functions": 90,
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tota1099/btc-converter.git"
+    "url": "git+https://github.com/tota1099/btc-converter-coindesk.git"
   },
   "keywords": [
     "js",
@@ -41,9 +41,9 @@
   "author": "Renan Porto <renan.porto1099@gmail.com> (https://tota1099.github.io/site/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tota1099/btc-converter/issues"
+    "url": "https://github.com/tota1099/btc-converter-coindesk/issues"
   },
-  "homepage": "https://github.com/tota1099/btc-converter#readme",
+  "homepage": "https://github.com/tota1099/btc-converter-coindesk#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-polyfill": "^6.26.0",
